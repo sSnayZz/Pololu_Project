@@ -16,7 +16,7 @@ int main()
         bump_sensors_read();
         while (bump_sensor_left_is_pressed())
         {
-            motors_set_speeds(500, 0);
+            motors_set_speeds(1000, 0);
             colors[0] = (rgb_color){ 0x40, 0x00, 0x00 };  // red
             colors[1] = (rgb_color){ 0x00, 0x40, 0x00 };  // green
             colors[2] = (rgb_color){ 0x00, 0x00, 0x40 };  // blue
