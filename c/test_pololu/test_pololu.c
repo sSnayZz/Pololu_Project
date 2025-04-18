@@ -21,6 +21,7 @@ int main()
             colors[1] = (rgb_color){ 0x00, 0x40, 0x00 };  // green
             colors[2] = (rgb_color){ 0x00, 0x00, 0x40 };  // blue
             rgb_leds_write(colors, 5, 31);
+            bump_sensors_reset_calibration();
         }
         while (bump_sensor_right_is_pressed())
         {
@@ -29,6 +30,7 @@ int main()
             colors[4] = (rgb_color){ 0x00, 0x40, 0x00 };  // green
             colors[5] = (rgb_color){ 0x00, 0x00, 0x40 };  // blue
             rgb_leds_write(colors, 5, 31);
+            bump_sensors_reset_calibration();
         }
         motors_set_speeds(0, 0);
         rgb_leds_write(colors, 5, 0);
